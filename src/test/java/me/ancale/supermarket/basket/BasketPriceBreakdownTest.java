@@ -1,17 +1,17 @@
 package me.ancale.supermarket.basket;
 
-import me.ancale.supermarket.product.Product;
-import me.ancale.supermarket.promotion.MultiApplicability;
-import me.ancale.supermarket.promotion.PercentDiscountabiliy;
-import me.ancale.supermarket.promotion.Promotion;
-import me.ancale.supermarket.promotion.SingleApplicability;
+import me.ancale.supermarket.product.entity.Product;
+import me.ancale.supermarket.promotion.entity.MultiApplicability;
+import me.ancale.supermarket.promotion.entity.PercentDiscountabiliy;
+import me.ancale.supermarket.promotion.entity.Promotion;
+import me.ancale.supermarket.promotion.entity.SingleApplicability;
 import org.joda.money.CurrencyUnit;
 import org.joda.money.Money;
 import org.junit.Test;
 
 import java.math.BigDecimal;
 
-import static me.ancale.supermarket.product.Product.builder;
+import static me.ancale.supermarket.product.entity.Product.builder;
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertThat;
 

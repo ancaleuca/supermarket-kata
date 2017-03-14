@@ -1,6 +1,10 @@
 package me.ancale.supermarket.promotion;
 
 import me.ancale.supermarket.TransactionTest;
+import me.ancale.supermarket.promotion.entity.Promotion;
+import me.ancale.supermarket.promotion.entity.SingleApplicability;
+import me.ancale.supermarket.promotion.entity.ValueDiscountability;
+import me.ancale.supermarket.promotion.transaction.AddSingleBuyValuePromotionTransaction;
 import org.joda.money.CurrencyUnit;
 import org.joda.money.Money;
 import org.junit.Test;

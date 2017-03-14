@@ -1,9 +1,9 @@
 package me.ancale.supermarket;
 
-import me.ancale.supermarket.product.InMemoryProductDatabase;
-import me.ancale.supermarket.product.ProductDatabase;
-import me.ancale.supermarket.promotion.InMemoryPromotionDatabase;
-import me.ancale.supermarket.promotion.PromotionDatabase;
+import me.ancale.supermarket.product.persistence.InMemoryProductDatabase;
+import me.ancale.supermarket.product.persistence.ProductDatabase;
+import me.ancale.supermarket.promotion.persistence.InMemoryPromotionDatabase;
+import me.ancale.supermarket.promotion.persistence.PromotionDatabase;
 
 public class Databases {
 

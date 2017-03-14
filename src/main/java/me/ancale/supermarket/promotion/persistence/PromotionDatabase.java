@@ -1,4 +1,6 @@
-package me.ancale.supermarket.promotion;
+package me.ancale.supermarket.promotion.persistence;
+
+import me.ancale.supermarket.promotion.entity.Promotion;
 
 public interface PromotionDatabase {
 

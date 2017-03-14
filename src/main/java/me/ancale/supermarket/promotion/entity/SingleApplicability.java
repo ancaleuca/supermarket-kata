@@ -1,4 +1,4 @@
-package me.ancale.supermarket.promotion;
+package me.ancale.supermarket.promotion.entity;
 
 public class SingleApplicability implements Applicability {
 

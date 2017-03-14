@@ -1,8 +1,10 @@
 package me.ancale.supermarket.product;
 
-import me.ancale.supermarket.promotion.AddSingleBuyPercentPromotionTransaction;
-import me.ancale.supermarket.promotion.Promotion;
-import org.hamcrest.core.IsNull;
+import me.ancale.supermarket.product.entity.Product;
+import me.ancale.supermarket.product.transaction.AddProductTransaction;
+import me.ancale.supermarket.product.transaction.ChangeProductPromotionTransaction;
+import me.ancale.supermarket.promotion.transaction.AddSingleBuyPercentPromotionTransaction;
+import me.ancale.supermarket.promotion.entity.Promotion;
 import org.joda.money.CurrencyUnit;
 import org.joda.money.Money;
 import org.junit.Test;

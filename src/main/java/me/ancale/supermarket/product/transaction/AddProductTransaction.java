@@ -1,6 +1,7 @@
-package me.ancale.supermarket.product;
+package me.ancale.supermarket.product.transaction;
 
 import me.ancale.supermarket.Transaction;
+import me.ancale.supermarket.product.entity.Product;
 import org.joda.money.Money;
 
 import static com.google.common.base.Preconditions.checkArgument;

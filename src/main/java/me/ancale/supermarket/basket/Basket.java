@@ -1,7 +1,7 @@
 package me.ancale.supermarket.basket;
 
-import me.ancale.supermarket.product.Product;
-import me.ancale.supermarket.promotion.Promotion;
+import me.ancale.supermarket.product.entity.Product;
+import me.ancale.supermarket.promotion.entity.Promotion;
 import org.joda.money.CurrencyUnit;
 import org.joda.money.Money;
 

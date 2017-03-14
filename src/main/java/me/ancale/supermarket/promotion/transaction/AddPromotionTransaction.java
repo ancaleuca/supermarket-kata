@@ -1,6 +1,9 @@
-package me.ancale.supermarket.promotion;
+package me.ancale.supermarket.promotion.transaction;
 
 import me.ancale.supermarket.Transaction;
+import me.ancale.supermarket.promotion.entity.Applicability;
+import me.ancale.supermarket.promotion.entity.Discountability;
+import me.ancale.supermarket.promotion.entity.Promotion;
 
 import static me.ancale.supermarket.Databases.promotionDatabase;
 

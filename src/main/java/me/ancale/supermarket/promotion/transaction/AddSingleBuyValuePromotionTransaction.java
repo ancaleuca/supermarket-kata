@@ -1,12 +1,16 @@
-package me.ancale.supermarket.promotion;
+package me.ancale.supermarket.promotion.transaction;
 
+import me.ancale.supermarket.promotion.entity.Applicability;
+import me.ancale.supermarket.promotion.entity.Discountability;
+import me.ancale.supermarket.promotion.entity.SingleApplicability;
+import me.ancale.supermarket.promotion.entity.ValueDiscountability;
 import org.joda.money.Money;
 
 public class AddSingleBuyValuePromotionTransaction extends AddPromotionTransaction {
 
     private final Money value;
 
-    protected AddSingleBuyValuePromotionTransaction(String id, String description, Money value) {
+    public AddSingleBuyValuePromotionTransaction(String id, String description, Money value) {
         super(id, description);
         this.value = value;
     }

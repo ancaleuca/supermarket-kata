@@ -1,6 +1,10 @@
 package me.ancale.supermarket.promotion;
 
 import me.ancale.supermarket.TransactionTest;
+import me.ancale.supermarket.promotion.entity.MultiApplicability;
+import me.ancale.supermarket.promotion.entity.PercentDiscountabiliy;
+import me.ancale.supermarket.promotion.entity.Promotion;
+import me.ancale.supermarket.promotion.transaction.AddMultiBuyPercentPromotionTransaction;
 import org.junit.Test;
 
 import java.math.BigDecimal;

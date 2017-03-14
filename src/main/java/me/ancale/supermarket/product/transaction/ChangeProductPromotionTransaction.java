@@ -1,7 +1,8 @@
-package me.ancale.supermarket.product;
+package me.ancale.supermarket.product.transaction;
 
 import me.ancale.supermarket.Transaction;
-import me.ancale.supermarket.promotion.Promotion;
+import me.ancale.supermarket.product.entity.Product;
+import me.ancale.supermarket.promotion.entity.Promotion;
 
 import static me.ancale.supermarket.Databases.productDatabase;
 import static me.ancale.supermarket.Databases.promotionDatabase;

@@ -1,4 +1,6 @@
-package me.ancale.supermarket.product;
+package me.ancale.supermarket.product.persistence;
+
+import me.ancale.supermarket.product.entity.Product;
 
 import java.util.HashMap;
 import java.util.Map;

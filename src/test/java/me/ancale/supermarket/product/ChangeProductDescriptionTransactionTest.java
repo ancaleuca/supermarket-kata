@@ -1,6 +1,10 @@
 package me.ancale.supermarket.product;
 
 import me.ancale.supermarket.TransactionTest;
+import me.ancale.supermarket.product.entity.Product;
+import me.ancale.supermarket.product.transaction.AddProductTransaction;
+import me.ancale.supermarket.product.transaction.ChangeProductDescriptionTransaction;
+import me.ancale.supermarket.product.transaction.ChangeProductTransaction;
 import org.joda.money.CurrencyUnit;
 import org.joda.money.Money;
 import org.junit.Test;

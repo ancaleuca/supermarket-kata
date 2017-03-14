@@ -1,4 +1,4 @@
-package me.ancale.supermarket.product;
+package me.ancale.supermarket.product.transaction;
 
 import me.ancale.supermarket.Transaction;
 

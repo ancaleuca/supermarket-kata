@@ -1,4 +1,6 @@
-package me.ancale.supermarket.product;
+package me.ancale.supermarket.product.transaction;
+
+import me.ancale.supermarket.product.entity.Product;
 
 import static com.google.common.base.Preconditions.checkArgument;
 import static com.google.common.base.Strings.isNullOrEmpty;

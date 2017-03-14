@@ -1,6 +1,6 @@
-package me.ancale.supermarket.product;
+package me.ancale.supermarket.product.entity;
 
-import me.ancale.supermarket.promotion.Promotion;
+import me.ancale.supermarket.promotion.entity.Promotion;
 import org.joda.money.Money;
 
 import java.util.Optional;
