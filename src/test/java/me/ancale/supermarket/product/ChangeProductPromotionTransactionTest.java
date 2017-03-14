@@ -1,6 +1,7 @@
 package me.ancale.supermarket.product;
 
 import me.ancale.supermarket.promotion.AddSingleBuyPercentPromotionTransaction;
+import me.ancale.supermarket.promotion.NoPromotion;
 import me.ancale.supermarket.promotion.Promotion;
 import org.joda.money.CurrencyUnit;
 import org.joda.money.Money;
@@ -29,13 +30,12 @@ public class ChangeProductPromotionTransactionTest {
         AddProductTransaction t2 = new AddProductTransaction(sku, "d", Money.of(CurrencyUnit.GBP, BigDecimal.TEN));
         t2.execute();
         Product product = productDatabase().getProduct(sku);
-        assertThat(product.getPromotion().isPresent(), is(false));
+        assertThat(product.getPromotion() instanceof NoPromotion, is(true));
 
         ChangeProductPromotionTransaction t3 = new ChangeProductPromotionTransaction(promoId, sku);
         t3.execute();
 
         product = productDatabase().getProduct(sku);
-        assertThat(product.getPromotion().isPresent(), is(true));
-        assertThat(product.getPromotion().get(), is(promotion));
+        assertThat(product.getPromotion(), is(promotion));
     }
 }
