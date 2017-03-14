@@ -11,7 +11,7 @@ import static me.ancale.supermarket.Databases.productDatabase;
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertThat;
 
-public class ChangeProductPriceTest extends SupermarketTransactionTest {
+public class ChangeProductPriceTransactionTest extends SupermarketTransactionTest {
 
     @Test
     public void changeProductPrice() throws Exception {
