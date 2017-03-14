@@ -1,6 +1,6 @@
 package me.ancale.supermarket.promotion;
 
-import org.junit.Before;
+import me.ancale.supermarket.SupermarketTransactionTest;
 import org.junit.Test;
 
 import java.math.BigDecimal;
@@ -9,12 +9,7 @@ import static me.ancale.supermarket.Databases.promotionDatabase;
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertThat;
 
-public class AddSingleBuyPercentPromotionTransactionTest {
-
-    @Before
-    public void before() throws Exception {
-        promotionDatabase().clear();
-    }
+public class AddSingleBuyPercentPromotionTransactionTest extends SupermarketTransactionTest {
 
     @Test
     public void addPromotion() throws Exception {

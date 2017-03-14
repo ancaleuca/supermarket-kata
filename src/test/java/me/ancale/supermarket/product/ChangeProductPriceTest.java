@@ -1,8 +1,8 @@
 package me.ancale.supermarket.product;
 
+import me.ancale.supermarket.SupermarketTransactionTest;
 import org.joda.money.CurrencyUnit;
 import org.joda.money.Money;
-import org.junit.Before;
 import org.junit.Test;
 
 import java.math.BigDecimal;
@@ -11,12 +11,7 @@ import static me.ancale.supermarket.Databases.productDatabase;
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertThat;
 
-public class ChangeProductPriceTest {
-
-    @Before
-    public void before() throws Exception {
-        productDatabase().clear();
-    }
+public class ChangeProductPriceTest extends SupermarketTransactionTest {
 
     @Test
     public void changeProductPrice() throws Exception {

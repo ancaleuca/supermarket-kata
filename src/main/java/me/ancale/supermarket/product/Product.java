@@ -1,9 +1,10 @@
 package me.ancale.supermarket.product;
 
-import com.google.common.base.Strings;
+import me.ancale.supermarket.promotion.Promotion;
 import org.joda.money.Money;
 
-import static com.google.common.base.Preconditions.checkArgument;
+import java.util.Optional;
+
 import static com.google.common.base.Preconditions.checkNotNull;
 import static com.google.common.base.Preconditions.checkState;
 import static com.google.common.base.Strings.isNullOrEmpty;
@@ -13,11 +14,13 @@ public class Product {
     private final String sku;
     private final String description;
     private final Money price;
+    private final Promotion promotion;
 
     private Product(Builder builder) {
         this.sku = builder.sku;
         this.description = builder.description;
         this.price = builder.price;
+        this.promotion = builder.promotion;
     }
 
     public String getSku() {
@@ -32,27 +35,32 @@ public class Product {
         return price;
     }
 
+    public Optional<Promotion> getPromotion() {
+        return Optional.ofNullable(promotion);
+    }
+
     public static Builder builder() {
         return new Builder();
     }
 
     public Builder toBuilder() {
-        return new Builder(this.sku, this.description, this.price);
+        return new Builder(this.sku, this.description, this.price, this.promotion);
     }
 
     public static class Builder {
         private String sku;
         private String description;
         private Money price;
+        private Promotion promotion;
 
         public Builder() {
-
         }
 
-        public Builder(String sku, String description, Money price) {
+        public Builder(String sku, String description, Money price, Promotion promotion) {
             this.sku = sku;
             this.description = description;
             this.price = price;
+            this.promotion = promotion;
         }
 
         public Builder setSku(String sku) {
@@ -67,6 +75,11 @@ public class Product {
 
         public Builder setPrice(Money price) {
             this.price = price;
+            return this;
+        }
+
+        public Builder setPromotion(Promotion promotion) {
+            this.promotion = promotion;
             return this;
         }
 

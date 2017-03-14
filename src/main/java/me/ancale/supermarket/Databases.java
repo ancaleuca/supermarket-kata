@@ -18,4 +18,9 @@ public class Databases {
         return promotionDatabase;
     }
 
+    public static void clear() {
+        productDatabase().clear();
+        promotionDatabase().clear();
+    }
+
 }

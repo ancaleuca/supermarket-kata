@@ -1,8 +1,8 @@
 package me.ancale.supermarket.promotion;
 
+import me.ancale.supermarket.SupermarketTransactionTest;
 import org.joda.money.CurrencyUnit;
 import org.joda.money.Money;
-import org.junit.Before;
 import org.junit.Test;
 
 import java.math.BigDecimal;
@@ -12,12 +12,7 @@ import static org.hamcrest.core.Is.is;
 import static org.hamcrest.core.IsNull.notNullValue;
 import static org.junit.Assert.assertThat;
 
-public class AddSingleBuyValuePromotionTransactionTest {
-
-    @Before
-    public void before() throws Exception {
-        promotionDatabase().clear();
-    }
+public class AddSingleBuyValuePromotionTransactionTest extends SupermarketTransactionTest {
 
     @Test
     public void addPromotion() throws Exception {
