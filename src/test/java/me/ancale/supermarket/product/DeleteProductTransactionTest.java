@@ -29,4 +29,10 @@ public class DeleteProductTransactionTest {
 
         assertThat(productDatabase().getProduct(sku), nullValue());
     }
+
+    @Test(expected = IllegalStateException.class)
+    public void cannotDeleteAProductIfDoesNotExist() {
+        DeleteProductTransaction t = new DeleteProductTransaction("sku1");
+        t.execute();
+    }
 }
