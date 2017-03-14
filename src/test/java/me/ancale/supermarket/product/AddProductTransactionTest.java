@@ -31,4 +31,16 @@ public class AddProductTransactionTest {
         assertThat(product.getDescription(), is("coffee"));
         assertThat(product.getPrice(), is(Money.of(CurrencyUnit.GBP, BigDecimal.TEN)));
     }
+
+    @Test(expected = IllegalStateException.class)
+    public void cannotAddProductIfAlreadyExists() {
+        AddProductTransaction t1 = new AddProductTransaction(
+                "sku1", "coffee", Money.of(CurrencyUnit.GBP, BigDecimal.TEN));
+        t1.execute();
+
+        AddProductTransaction t2 = new AddProductTransaction(
+                "sku1", "duplicate", Money.of(CurrencyUnit.GBP, BigDecimal.TEN));
+
+        t2.execute();
+    }
 }
