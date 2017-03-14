@@ -11,7 +11,7 @@ import static me.ancale.supermarket.Databases.productDatabase;
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertThat;
 
-public class ChangeProductDescriptionTest {
+public class ChangeProductDescriptionTransactionTest {
 
     @Before
     public void before() {
@@ -28,7 +28,7 @@ public class ChangeProductDescriptionTest {
         AddProductTransaction t1 = new AddProductTransaction(sku, description, price);
         t1.execute();
 
-        ChangeProductTransaction t2 = new ChangeProductDescription(sku, newDescription);
+        ChangeProductTransaction t2 = new ChangeProductDescriptionTransaction(sku, newDescription);
 
         t2.execute();
 
@@ -41,7 +41,7 @@ public class ChangeProductDescriptionTest {
 
     @Test(expected = IllegalStateException.class)
     public void cannotChangeProductDescriptionIfProductDoesNotExist() throws Exception {
-        ChangeProductTransaction t2 = new ChangeProductDescription("sku", "description");
+        ChangeProductTransaction t2 = new ChangeProductDescriptionTransaction("sku", "description");
         t2.execute();
     }
 }
