@@ -1,9 +1,9 @@
 package me.ancale.supermarket.promotion.transaction;
 
 import me.ancale.supermarket.promotion.entity.Applicability;
-import me.ancale.supermarket.promotion.entity.Discountability;
+import me.ancale.supermarket.promotion.entity.Discount;
 import me.ancale.supermarket.promotion.entity.SingleApplicability;
-import me.ancale.supermarket.promotion.entity.ValueDiscountability;
+import me.ancale.supermarket.promotion.entity.ValueDiscount;
 import org.joda.money.Money;
 
 public class AddSingleBuyValuePromotionTransaction extends AddPromotionTransaction {
@@ -21,7 +21,7 @@ public class AddSingleBuyValuePromotionTransaction extends AddPromotionTransacti
     }
 
     @Override
-    protected Discountability makeDiscountability() {
-        return new ValueDiscountability(value);
+    protected Discount makeDiscount() {
+        return new ValueDiscount(value);
     }
 }

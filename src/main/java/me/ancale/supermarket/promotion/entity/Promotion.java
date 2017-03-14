@@ -10,15 +10,15 @@ public class Promotion {
 
     private final Applicability applicability;
 
-    private final Discountability discountability;
+    private final Discount discount;
 
     public Promotion(String id, String description,
                         Applicability applicability,
-                        Discountability discountability) {
+                        Discount discount) {
         this.id = id;
         this.description = description;
         this.applicability = applicability;
-        this.discountability = discountability;
+        this.discount = discount;
     }
 
     public String getId() {
@@ -33,8 +33,8 @@ public class Promotion {
         return applicability;
     }
 
-    public Discountability getDiscountability() {
-        return discountability;
+    public Discount getDiscount() {
+        return discount;
     }
 
     @Override

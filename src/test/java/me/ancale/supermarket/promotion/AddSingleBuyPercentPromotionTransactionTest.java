@@ -1,7 +1,7 @@
 package me.ancale.supermarket.promotion;
 
 import me.ancale.supermarket.TransactionTest;
-import me.ancale.supermarket.promotion.entity.PercentDiscountabiliy;
+import me.ancale.supermarket.promotion.entity.PercentDiscount;
 import me.ancale.supermarket.promotion.entity.Promotion;
 import me.ancale.supermarket.promotion.entity.SingleApplicability;
 import me.ancale.supermarket.promotion.transaction.AddSingleBuyPercentPromotionTransaction;
@@ -28,7 +28,7 @@ public class AddSingleBuyPercentPromotionTransactionTest extends TransactionTest
         assertThat(promotion.getId(), is(id));
         assertThat(promotion.getDescription(), is(description));
         assertThat(promotion.getApplicability() instanceof SingleApplicability, is(true));
-        assertThat(promotion.getDiscountability() instanceof PercentDiscountabiliy, is(true));
-        assertThat(((PercentDiscountabiliy)promotion.getDiscountability()).getPercent(), is(percent));
+        assertThat(promotion.getDiscount() instanceof PercentDiscount, is(true));
+        assertThat(((PercentDiscount)promotion.getDiscount()).getPercent(), is(percent));
     }
 }

@@ -2,7 +2,7 @@ package me.ancale.supermarket.promotion;
 
 import me.ancale.supermarket.TransactionTest;
 import me.ancale.supermarket.promotion.entity.MultiApplicability;
-import me.ancale.supermarket.promotion.entity.PercentDiscountabiliy;
+import me.ancale.supermarket.promotion.entity.PercentDiscount;
 import me.ancale.supermarket.promotion.entity.Promotion;
 import me.ancale.supermarket.promotion.transaction.AddMultiBuyPercentPromotionTransaction;
 import org.junit.Test;
@@ -29,8 +29,8 @@ public class AddMultiBuyPercentPromotionTransactionTest extends TransactionTest 
         Promotion promotion = promotionDatabase().getPromotion(id);
         assertThat(promotion.getId(), is(id));
         assertThat(promotion.getDescription(), is(description));
-        assertThat(promotion.getDiscountability() instanceof PercentDiscountabiliy, is(true));
-        assertThat(((PercentDiscountabiliy)promotion.getDiscountability()).getPercent(), is(percent));
+        assertThat(promotion.getDiscount() instanceof PercentDiscount, is(true));
+        assertThat(((PercentDiscount)promotion.getDiscount()).getPercent(), is(percent));
         assertThat(promotion.getApplicability() instanceof MultiApplicability, is(true));
         assertThat(promotion.getApplicability().applicabilitySetSize(), is(setSize));
     }

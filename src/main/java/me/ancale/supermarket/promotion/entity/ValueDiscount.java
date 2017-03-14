@@ -2,11 +2,11 @@ package me.ancale.supermarket.promotion.entity;
 
 import org.joda.money.Money;
 
-public class ValueDiscountability implements Discountability {
+public class ValueDiscount implements Discount {
 
     private final Money value;
 
-    public ValueDiscountability(Money value) {
+    public ValueDiscount(Money value) {
         this.value = value;
     }
 

@@ -1,8 +1,8 @@
 package me.ancale.supermarket.promotion.transaction;
 
 import me.ancale.supermarket.promotion.entity.Applicability;
-import me.ancale.supermarket.promotion.entity.Discountability;
-import me.ancale.supermarket.promotion.entity.PercentDiscountabiliy;
+import me.ancale.supermarket.promotion.entity.Discount;
+import me.ancale.supermarket.promotion.entity.PercentDiscount;
 import me.ancale.supermarket.promotion.entity.SingleApplicability;
 
 import java.math.BigDecimal;
@@ -22,7 +22,7 @@ public class AddSingleBuyPercentPromotionTransaction extends AddPromotionTransac
     }
 
     @Override
-    protected Discountability makeDiscountability() {
-        return new PercentDiscountabiliy(percent);
+    protected Discount makeDiscount() {
+        return new PercentDiscount(percent);
     }
 }

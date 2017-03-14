@@ -2,7 +2,7 @@ package me.ancale.supermarket.promotion.transaction;
 
 import me.ancale.supermarket.Transaction;
 import me.ancale.supermarket.promotion.entity.Applicability;
-import me.ancale.supermarket.promotion.entity.Discountability;
+import me.ancale.supermarket.promotion.entity.Discount;
 import me.ancale.supermarket.promotion.entity.Promotion;
 
 import static me.ancale.supermarket.Databases.promotionDatabase;
@@ -23,11 +23,11 @@ public abstract class AddPromotionTransaction implements Transaction {
             throw new IllegalStateException(String.format("Promotion %s already exists", id));
         }
         Applicability applicability = makeApplicability();
-        Discountability discountability = makeDiscountability();
-        promotionDatabase().addPromotion(new Promotion(id, description, applicability, discountability));
+        Discount discount = makeDiscount();
+        promotionDatabase().addPromotion(new Promotion(id, description, applicability, discount));
     }
 
     protected abstract Applicability makeApplicability();
 
-    protected abstract Discountability makeDiscountability();
+    protected abstract Discount makeDiscount();
 }

@@ -3,7 +3,7 @@ package me.ancale.supermarket.promotion;
 import me.ancale.supermarket.TransactionTest;
 import me.ancale.supermarket.promotion.entity.Promotion;
 import me.ancale.supermarket.promotion.entity.SingleApplicability;
-import me.ancale.supermarket.promotion.entity.ValueDiscountability;
+import me.ancale.supermarket.promotion.entity.ValueDiscount;
 import me.ancale.supermarket.promotion.transaction.AddSingleBuyValuePromotionTransaction;
 import org.joda.money.CurrencyUnit;
 import org.joda.money.Money;
@@ -32,7 +32,7 @@ public class AddSingleBuyValuePromotionTransactionTest extends TransactionTest {
         assertThat(promotion, notNullValue());
         assertThat(promotion.getDescription(), is(description));
         assertThat(promotion.getApplicability() instanceof SingleApplicability, is(true));
-        assertThat(promotion.getDiscountability() instanceof ValueDiscountability, is(true));
-        assertThat(((ValueDiscountability)promotion.getDiscountability()).getValue(), is(value));
+        assertThat(promotion.getDiscount() instanceof ValueDiscount, is(true));
+        assertThat(((ValueDiscount)promotion.getDiscount()).getValue(), is(value));
     }
 }

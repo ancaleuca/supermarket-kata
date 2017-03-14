@@ -5,13 +5,13 @@ import org.joda.money.Money;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 
-public class PercentDiscountabiliy implements Discountability {
+public class PercentDiscount implements Discount {
 
     private static final RoundingMode ROUNDING_MODE = RoundingMode.HALF_UP;
 
     private final BigDecimal percent;
 
-    public PercentDiscountabiliy(BigDecimal percent) {
+    public PercentDiscount(BigDecimal percent) {
         this.percent = percent;
     }
 

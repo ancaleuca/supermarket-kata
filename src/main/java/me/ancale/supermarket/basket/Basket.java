@@ -39,7 +39,7 @@ public class Basket {
             List<Product> candidates = products.subList(i, i + applicabilitySetSize);
             if (candidates.stream().allMatch(p -> p.getPromotion().isPresent() && p.getPromotion().get().getId().equals(promoId))) {
                 totalDiscount = totalDiscount.plus(
-                        promotion.getDiscountability().discount(calculateTotal(candidates)));
+                        promotion.getDiscount().discount(calculateTotal(candidates)));
                 i = i + applicabilitySetSize - 1;
             }
         }

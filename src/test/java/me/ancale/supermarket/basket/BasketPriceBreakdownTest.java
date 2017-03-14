@@ -2,7 +2,7 @@ package me.ancale.supermarket.basket;
 
 import me.ancale.supermarket.product.entity.Product;
 import me.ancale.supermarket.promotion.entity.MultiApplicability;
-import me.ancale.supermarket.promotion.entity.PercentDiscountabiliy;
+import me.ancale.supermarket.promotion.entity.PercentDiscount;
 import me.ancale.supermarket.promotion.entity.Promotion;
 import me.ancale.supermarket.promotion.entity.SingleApplicability;
 import org.joda.money.CurrencyUnit;
@@ -32,10 +32,10 @@ public class BasketPriceBreakdownTest {
     public void calculatePriceBreakdownForMatchingMixOfPromotions() {
         Basket basket = new Basket();
         Promotion promo1 = new Promotion("id1", "Buy 1 get 10% off",
-                new SingleApplicability(), new PercentDiscountabiliy(BigDecimal.TEN));
+                new SingleApplicability(), new PercentDiscount(BigDecimal.TEN));
 
         Promotion promo2 = new Promotion("id2", "Buy 2 get 20% off",
-                new MultiApplicability(2), new PercentDiscountabiliy(new BigDecimal("20")));
+                new MultiApplicability(2), new PercentDiscount(new BigDecimal("20")));
 
         basket.addProduct(product("sku1", "coffee", Money.of(CurrencyUnit.GBP, BigDecimal.TEN), promo1));
 
