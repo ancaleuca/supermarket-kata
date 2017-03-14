@@ -16,7 +16,7 @@ public class PercentDiscountabiliy implements Discountability {
     }
 
     @Override
-    public Money discount(Money money) {
+    public Money discounted(Money money) {
         Money discount = money.multipliedBy(percent, ROUNDING_MODE).dividedBy(100, ROUNDING_MODE);
         return money.minus(discount);
     }
