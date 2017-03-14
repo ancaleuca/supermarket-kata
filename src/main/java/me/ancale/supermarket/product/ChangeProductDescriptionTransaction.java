@@ -4,11 +4,11 @@ import static com.google.common.base.Preconditions.checkArgument;
 import static com.google.common.base.Strings.isNullOrEmpty;
 import static me.ancale.supermarket.Databases.productDatabase;
 
-public class ChangeProductDescription extends ChangeProductTransaction {
+public class ChangeProductDescriptionTransaction extends ChangeProductTransaction {
 
     private final String description;
 
-    public ChangeProductDescription(String sku, String description) {
+    public ChangeProductDescriptionTransaction(String sku, String description) {
         super(sku);
         checkArgument(!isNullOrEmpty(description));
         this.description = description;

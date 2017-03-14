@@ -25,14 +25,10 @@ public class AddProductTransaction implements Transaction {
     }
 
     public void execute() {
-        validateProduct();
-        Product product = Product.builder().setSku(sku).setDescription(description).setPrice(price).build();
-        productDatabase().addProduct(product);
-    }
-
-    private void validateProduct() {
         if (productDatabase().getProduct(sku) != null) {
             throw new IllegalStateException(String.format("Product %s already exists", sku));
         }
+        Product product = Product.builder().setSku(sku).setDescription(description).setPrice(price).build();
+        productDatabase().addProduct(product);
     }
 }
