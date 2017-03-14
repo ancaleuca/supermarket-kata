@@ -16,4 +16,9 @@ public class InMemoryProductDatabase implements ProductDatabase {
     public void addProduct(Product product) {
         products.put(product.getSku(), product);
     }
+
+    @Override
+    public void deleteProduct(String sku) {
+        products.remove(sku);
+    }
 }

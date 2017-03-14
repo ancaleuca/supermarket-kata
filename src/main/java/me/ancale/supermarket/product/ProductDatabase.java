@@ -5,4 +5,6 @@ public interface ProductDatabase {
     Product getProduct(String sku);
 
     void addProduct(Product product);
+
+    void deleteProduct(String sku);
 }
