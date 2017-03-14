@@ -21,4 +21,9 @@ public class InMemoryProductDatabase implements ProductDatabase {
     public void deleteProduct(String sku) {
         products.remove(sku);
     }
+
+    @Override
+    public void deleteAllProducts() {
+        products.clear();
+    }
 }

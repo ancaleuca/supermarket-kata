@@ -26,8 +26,7 @@ public class AddProductTransaction implements Transaction {
 
     public void execute() {
         validateProduct();
-
-        Product product = new Product(sku, description, price);
+        Product product = Product.builder().setSku(sku).setDescription(description).setPrice(price).build();
         productDatabase().addProduct(product);
     }
 

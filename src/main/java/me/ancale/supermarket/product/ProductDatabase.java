@@ -7,4 +7,6 @@ public interface ProductDatabase {
     void addProduct(Product product);
 
     void deleteProduct(String sku);
+
+    void deleteAllProducts();
 }

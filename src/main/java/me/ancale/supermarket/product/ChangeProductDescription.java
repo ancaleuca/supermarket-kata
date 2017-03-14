@@ -17,7 +17,7 @@ public class ChangeProductDescription extends ChangeProductTransaction {
     @Override
     public void change(String sku) {
         Product existing = productDatabase().getProduct(sku);
-        Product changed = new Product(existing.getSku(), description, existing.getPrice());
+        Product changed = existing.toBuilder().setDescription(description).build();
         productDatabase().addProduct(changed);
     }
 }
