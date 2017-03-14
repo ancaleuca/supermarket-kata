@@ -13,4 +13,8 @@ public class ValueDiscountability implements Discountability {
     public Money discount(Money money) {
         return money.minus(value);
     }
+
+    public Money getValue() {
+        return value;
+    }
 }

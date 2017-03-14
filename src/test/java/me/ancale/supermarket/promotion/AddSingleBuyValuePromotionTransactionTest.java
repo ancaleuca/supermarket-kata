@@ -1,6 +1,5 @@
 package me.ancale.supermarket.promotion;
 
-import org.hamcrest.core.IsNull;
 import org.joda.money.CurrencyUnit;
 import org.joda.money.Money;
 import org.junit.Test;
@@ -17,7 +16,7 @@ public class AddSingleBuyValuePromotionTransactionTest {
     @Test
     public void addPromotion() throws Exception {
         String id = "promoid";
-        String description = "Pay £2 less";
+        String description = "Buy one pay £2 less";
         Money value = Money.of(CurrencyUnit.GBP, new BigDecimal(2));
         AddSingleBuyValuePromotionTransaction t = new AddSingleBuyValuePromotionTransaction(
                 id, description, value);
@@ -28,5 +27,7 @@ public class AddSingleBuyValuePromotionTransactionTest {
         assertThat(promotion, notNullValue());
         assertThat(promotion.getDescription(), is(description));
         assertThat(promotion.getApplicability() instanceof SingleApplicability, is(true));
+        assertThat(promotion.getDiscountability() instanceof ValueDiscountability, is(true));
+        assertThat(((ValueDiscountability)promotion.getDiscountability()).getValue(), is(value));
     }
 }
