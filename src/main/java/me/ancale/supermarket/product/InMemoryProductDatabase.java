@@ -23,7 +23,7 @@ public class InMemoryProductDatabase implements ProductDatabase {
     }
 
     @Override
-    public void deleteAllProducts() {
+    public void clear() {
         products.clear();
     }
 }

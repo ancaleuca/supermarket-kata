@@ -17,7 +17,7 @@ public class AddProductTransactionTest {
 
     @Before
     public void before() {
-        productDatabase().deleteAllProducts();
+        productDatabase().clear();
     }
 
     @Test

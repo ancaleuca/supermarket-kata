@@ -16,8 +16,10 @@ public class ChangeProductDescription extends ChangeProductTransaction {
 
     @Override
     public void change(String sku) {
-        Product existing = productDatabase().getProduct(sku);
-        Product changed = existing.toBuilder().setDescription(description).build();
-        productDatabase().addProduct(changed);
+        Product product = productDatabase().getProduct(sku);
+        if (product == null) {
+            throw new IllegalStateException(String.format("Product %s does not exist", sku));
+        }
+        productDatabase().addProduct(product.toBuilder().setDescription(description).build());
     }
 }

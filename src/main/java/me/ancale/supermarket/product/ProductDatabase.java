@@ -8,5 +8,5 @@ public interface ProductDatabase {
 
     void deleteProduct(String sku);
 
-    void deleteAllProducts();
+    void clear();
 }
