@@ -9,18 +9,19 @@ import java.math.BigDecimal;
 
 public class AddMultiBuyPercentPromotionTransaction extends AddPromotionTransaction {
 
-    private final int setSize;
+    private final int applicabilitySetSize;
     private final BigDecimal percent;
 
-    public AddMultiBuyPercentPromotionTransaction(String id, String description, int setSize, BigDecimal percent) {
+    public AddMultiBuyPercentPromotionTransaction(String id, String description,
+                                                  int applicabilitySetSize, BigDecimal percent) {
         super(id, description);
-        this.setSize = setSize;
+        this.applicabilitySetSize = applicabilitySetSize;
         this.percent = percent;
     }
 
     @Override
     protected Applicability makeApplicability() {
-        return new MultiApplicability(setSize);
+        return new MultiApplicability(applicabilitySetSize);
     }
 
     @Override
