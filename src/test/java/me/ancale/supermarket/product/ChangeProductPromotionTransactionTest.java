@@ -1,8 +1,8 @@
 package me.ancale.supermarket.product;
 
 import me.ancale.supermarket.promotion.AddSingleBuyPercentPromotionTransaction;
-import me.ancale.supermarket.promotion.NoPromotion;
 import me.ancale.supermarket.promotion.Promotion;
+import org.hamcrest.core.IsNull;
 import org.joda.money.CurrencyUnit;
 import org.joda.money.Money;
 import org.junit.Test;
@@ -30,12 +30,13 @@ public class ChangeProductPromotionTransactionTest {
         AddProductTransaction t2 = new AddProductTransaction(sku, "d", Money.of(CurrencyUnit.GBP, BigDecimal.TEN));
         t2.execute();
         Product product = productDatabase().getProduct(sku);
-        assertThat(product.getPromotion() instanceof NoPromotion, is(true));
+        assertThat(product.getPromotion().isPresent(), is(false));
 
         ChangeProductPromotionTransaction t3 = new ChangeProductPromotionTransaction(promoId, sku);
         t3.execute();
 
         product = productDatabase().getProduct(sku);
-        assertThat(product.getPromotion(), is(promotion));
+        assertThat(product.getPromotion().isPresent(), is(true));
+        assertThat(product.getPromotion().get(), is(promotion));
     }
 }

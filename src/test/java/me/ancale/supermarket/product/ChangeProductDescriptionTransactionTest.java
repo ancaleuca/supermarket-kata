@@ -1,6 +1,6 @@
 package me.ancale.supermarket.product;
 
-import me.ancale.supermarket.SupermarketTransactionTest;
+import me.ancale.supermarket.TransactionTest;
 import org.joda.money.CurrencyUnit;
 import org.joda.money.Money;
 import org.junit.Test;
@@ -11,7 +11,7 @@ import static me.ancale.supermarket.Databases.productDatabase;
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertThat;
 
-public class ChangeProductDescriptionTransactionTest extends SupermarketTransactionTest {
+public class ChangeProductDescriptionTransactionTest extends TransactionTest {
 
     @Test
     public void changeDescription() {

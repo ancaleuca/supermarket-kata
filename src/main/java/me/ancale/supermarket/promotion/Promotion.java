@@ -1,5 +1,7 @@
 package me.ancale.supermarket.promotion;
 
+import com.google.common.base.Objects;
+
 public class Promotion {
 
     private final String id;
@@ -33,5 +35,18 @@ public class Promotion {
 
     public Discountability getDiscountability() {
         return discountability;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Promotion promotion = (Promotion) o;
+        return Objects.equal(id, promotion.id);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hashCode(id);
     }
 }

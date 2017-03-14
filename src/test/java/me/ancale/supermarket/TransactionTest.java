@@ -2,7 +2,7 @@ package me.ancale.supermarket;
 
 import org.junit.Before;
 
-public class SupermarketTransactionTest {
+public class TransactionTest {
 
     @Before
     public void before() {

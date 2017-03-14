@@ -1,6 +1,6 @@
 package me.ancale.supermarket.product;
 
-import me.ancale.supermarket.SupermarketTransactionTest;
+import me.ancale.supermarket.TransactionTest;
 import org.joda.money.CurrencyUnit;
 import org.joda.money.Money;
 import org.junit.Test;
@@ -12,7 +12,7 @@ import static org.hamcrest.core.IsNull.notNullValue;
 import static org.hamcrest.core.IsNull.nullValue;
 import static org.junit.Assert.assertThat;
 
-public class DeleteProductTransactionTest extends SupermarketTransactionTest {
+public class DeleteProductTransactionTest extends TransactionTest {
 
     @Test
     public void deleteAnExistingProduct() {

@@ -1,6 +1,6 @@
 package me.ancale.supermarket.promotion;
 
-import me.ancale.supermarket.SupermarketTransactionTest;
+import me.ancale.supermarket.TransactionTest;
 import org.joda.money.CurrencyUnit;
 import org.joda.money.Money;
 import org.junit.Test;
@@ -12,7 +12,7 @@ import static org.hamcrest.core.Is.is;
 import static org.hamcrest.core.IsNull.notNullValue;
 import static org.junit.Assert.assertThat;
 
-public class AddSingleBuyValuePromotionTransactionTest extends SupermarketTransactionTest {
+public class AddSingleBuyValuePromotionTransactionTest extends TransactionTest {
 
     @Test
     public void addPromotion() throws Exception {

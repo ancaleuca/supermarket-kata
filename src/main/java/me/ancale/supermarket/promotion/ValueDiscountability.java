@@ -11,8 +11,8 @@ public class ValueDiscountability implements Discountability {
     }
 
     @Override
-    public Money discounted(Money money) {
-        return money.minus(value);
+    public Money discount(Money money) {
+        return value;
     }
 
     public Money getValue() {

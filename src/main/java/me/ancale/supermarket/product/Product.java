@@ -1,8 +1,9 @@
 package me.ancale.supermarket.product;
 
-import me.ancale.supermarket.promotion.NoPromotion;
 import me.ancale.supermarket.promotion.Promotion;
 import org.joda.money.Money;
+
+import java.util.Optional;
 
 import static com.google.common.base.Preconditions.checkNotNull;
 import static com.google.common.base.Preconditions.checkState;
@@ -34,8 +35,8 @@ public class Product {
         return price;
     }
 
-    public Promotion getPromotion() {
-        return promotion;
+    public Optional<Promotion> getPromotion() {
+        return Optional.ofNullable(promotion);
     }
 
     public static Builder builder() {
@@ -50,7 +51,7 @@ public class Product {
         private String sku;
         private String description;
         private Money price;
-        private Promotion promotion = new NoPromotion();
+        private Promotion promotion;
 
         public Builder() {
         }
@@ -86,7 +87,6 @@ public class Product {
             checkState(!isNullOrEmpty(sku));
             checkState(!isNullOrEmpty(description));
             checkNotNull(price);
-            checkNotNull(promotion);
             return new Product(this);
         }
     }

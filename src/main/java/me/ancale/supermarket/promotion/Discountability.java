@@ -4,5 +4,5 @@ import org.joda.money.Money;
 
 public interface Discountability {
 
-    Money discounted(Money money);
+    Money discount(Money money);
 }
