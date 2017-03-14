@@ -7,4 +7,6 @@ public interface PromotionDatabase {
     boolean hasPromotion(String promotionId);
 
     Promotion getPromotion(String promotionId);
+
+    void clear();
 }

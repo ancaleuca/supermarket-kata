@@ -9,6 +9,7 @@ public class ValueDiscountability implements Discountability {
     public ValueDiscountability(Money value) {
         this.value = value;
     }
+
     @Override
     public Money discounted(Money money) {
         return money.minus(value);

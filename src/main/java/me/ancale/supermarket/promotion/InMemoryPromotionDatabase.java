@@ -22,5 +22,8 @@ public class InMemoryPromotionDatabase implements PromotionDatabase {
         return promotions.get(promotionId);
     }
 
-
+    @Override
+    public void clear() {
+        promotions.clear();
+    }
 }
