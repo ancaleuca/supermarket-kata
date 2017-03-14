@@ -1,0 +1,1 @@
+# Implementation of supermarket kata found [here] (http://codekata.com/kata/kata01-supermarket-pricing/)
